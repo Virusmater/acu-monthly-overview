@@ -3,6 +3,43 @@ body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
 	padding:0;
 	border-width:0;
 }
+
+@font-face{
+  font-family: "ETC Trispace Black";
+  src: url("./ETCTrispace-Black.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: "ETC Trispace Black Wide";
+  src: url("./ETCTrispace-BlackWide.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: "ETC Trispace Bold";
+  src: url("./ETCTrispace-Bold.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: "ETC Trispace SemiBold Wide";
+  src: url("./ETCTrispace-SemiBoldWide.ttf") format("truetype");
+}
+
+
+@font-face{
+  font-family: "ETC Trispace SemiBold";
+  src: url("./ETCTrispace-SemiBold.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: "ETC Trispace SemiBold Narrow";
+  src: url("./ETCTrispace-SemiBoldNarrow.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: "ETC Trispace Black Narrow";
+  src: url("./ETCTrispace-BlackNarrow.ttf") format("truetype");
+}
+
 div.Basic-Text-Frame {
 	border-style:solid;
 }
@@ -40,8 +77,9 @@ span.ACT {
 	font-family:"ETC Trispace Black", serif;
 	font-size:12pt;
 	font-style:normal;
-	font-weight:900;
+	font-weight: normal;
 }
+
 span.DATE {
 	font-family:"ETC Trispace Black Wide", serif;
 	font-size:12pt;
