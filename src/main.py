@@ -2,9 +2,9 @@ from flask import Flask, render_template, request
 
 from src import parser
 
-app = Flask(__name__)
+application = Flask(__name__)
 
-@app.route("/")
+@application.route("/")
 def main():
     month = request.args.get('month')
     if not month:
