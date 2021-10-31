@@ -1,0 +1,288 @@
+body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
+	margin:0;
+	padding:0;
+	border-width:0;
+}
+div.Basic-Text-Frame {
+	border-style:solid;
+}
+table.Basic-Table {
+	border-collapse:collapse;
+	border-color:#000000;
+	border-width:1px;
+	margin-bottom:-4px;
+	margin-top:4px;
+    width: 100%;
+}
+td.Basic-Table {
+	border-left-width:1px;
+	border-left-style:solid;
+	border-left-color:#000000;
+	border-top-width:1px;
+	border-top-style:solid;
+	border-top-color:#000000;
+	border-right-width:1px;
+	border-right-style:solid;
+	border-right-color:#000000;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-bottom-color:#000000;
+	padding-top:4px;
+	padding-bottom:4px;
+	padding-left:4px;
+	padding-right:4px;
+	vertical-align:top;
+}
+p.Basic-Paragraph {
+	text-align:left;
+}
+span.ACT {
+	font-family:"ETC Trispace Black", serif;
+	font-size:12pt;
+	font-style:normal;
+	font-weight:900;
+}
+span.DATE {
+	font-family:"ETC Trispace Black Wide", serif;
+	font-size:12pt;
+	font-style:normal;
+	font-weight:900;
+}
+span.DAY {
+	font-family:"ETC Trispace", serif;
+	font-size:12pt;
+	font-style:normal;
+	font-weight:bold;
+}
+span.FOOTER {
+	font-family:"ETC Trispace SemiBold Wide", serif;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:600;
+	text-transform:uppercase;
+}
+span.GENRE {
+	font-family:"ETC Trispace SemiBold", serif;
+	font-size:12pt;
+	font-style:normal;
+	font-weight:600;
+}
+span.HEADER {
+	font-family:"ETC Trispace Black Wide", serif;
+	font-size:27pt;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:900;
+	text-transform:uppercase;
+}
+span.PRICE {
+	font-family:"ETC Trispace SemiBold Narrow", serif;
+	font-size:12pt;
+	font-style:normal;
+	font-weight:600;
+}
+span.TIME {
+	font-family:"ETC Trispace", serif;
+	font-size:12pt;
+	font-style:normal;
+	font-weight:bold;
+}
+span.TOPBAR {
+	font-family:"ETC Trispace Black Narrow", serif;
+	font-size:14pt;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:900;
+	text-transform:uppercase;
+}
+td.CellOverride-1 {
+	border-bottom-width:2px;
+	border-left-width:0px;
+	border-right-width:0px;
+	border-top-width:0px;
+	padding-bottom:9px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:9px;
+	vertical-align:middle;
+}
+td.CellOverride-2 {
+	border-bottom-width:0px;
+	border-left-width:0px;
+	border-right-width:0px;
+	border-top-width:2px;
+	padding-bottom:8px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:8px;
+	vertical-align:middle;
+}
+td.CellOverride-3 {
+	border-bottom-width:2px;
+	border-left-width:0px;
+	border-right-width:0px;
+	border-top-width:2px;
+	padding-bottom:8px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:8px;
+	vertical-align:middle;
+}
+td.CellOverride-4 {
+	border-bottom-width:0px;
+	border-left-width:0px;
+	border-right-width:0px;
+	border-top-width:0px;
+	padding-bottom:8px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:8px;
+	vertical-align:middle;
+}
+td.CellOverride-5 {
+	border-bottom-width:0px;
+	border-left-width:0px;
+	border-right-width:0px;
+	border-top-width:2px;
+	padding-bottom:8px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:8px;
+	vertical-align:top;
+}
+td.CellOverride-6 {
+	border-bottom-width:2px;
+	border-left-width:0px;
+	border-right-width:0px;
+	border-top-width:2px;
+	padding-bottom:8px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:8px;
+	vertical-align:top;
+}
+td.CellOverride-7 {
+	border-bottom-width:2px;
+	border-left-width:0px;
+	border-right-width:0px;
+	border-top-width:2px;
+	padding-bottom:11px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:11px;
+	vertical-align:middle;
+}
+p.ParaOverride-1 {
+	-epub-hyphens:none;
+}
+p.ParaOverride-2 {
+	text-align:right;
+}
+span.CharOverride-1 {
+	font-family:"ETC Trispace (OTF)", sans-serif;
+	font-style:normal;
+	font-weight:normal;
+}
+span.CharOverride-2 {
+	font-family:"ETC Trispace", serif;
+	font-size:12pt;
+	font-style:normal;
+	font-weight:bold;
+}
+span.CharOverride-3 {
+	color:#020203;
+	font-family:"ETC Trispace", serif;
+	font-size:12pt;
+	font-style:normal;
+	font-weight:bold;
+}
+span.CharOverride-4 {
+	font-family:"ETC Trispace Black Wide", serif;
+	font-style:normal;
+	font-weight:900;
+}
+span.CharOverride-5 {
+	color:#020203;
+}
+span.CharOverride-6 {
+	font-family:"ETC Trispace Black Wide", serif;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:900;
+	text-transform:uppercase;
+}
+span.CharOverride-7 {
+	font-family:"ETC Trispace (OTF) Bold Wide", sans-serif;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	text-transform:uppercase;
+}
+span.CharOverride-8 {
+	font-family:"ETC Trispace SemiBold Wide", serif;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:600;
+	text-transform:uppercase;
+}
+span.CharOverride-9 {
+	font-style:normal;
+	font-weight:normal;
+}
+
+tr.table-header {
+	min-height:48px;
+}
+
+#logo {
+	display:inline-block;
+}
+#title {
+    width: 100%;
+        padding-left: 25pt;
+
+}
+#date {
+    width: 380px;
+}
+img._idGenObjectAttribute-1 {
+	height:100.00%;
+
+}
+div.logo {
+    width: 181px;
+	border-width:0px;
+}
+
+div.header {
+	text-align:center;
+    display: flex;
+    height: 60pt;
+}
+
+
+div.footer {
+    display: flex;
+    position: fixed;
+    bottom:0%;
+    width:100%;
+}
+#address-layout {
+    width: 50%;
+}
+
+._idGenTableRowColumn-2 {
+    width: 7%;
+}
+
+._idGenTableRowColumn-3 {
+    width: 69%
+}
+
+@media print
+{
+    .month-selector, .month-selector *
+    {
+        display: none !important;
+    }
+}

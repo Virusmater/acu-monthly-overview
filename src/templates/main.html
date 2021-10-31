@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8" />
+		<title>monthly_overview</title>
+    	<link href="{{ url_for('static', filename='style.css') }}" rel='stylesheet'/>
+	</head>
+	<body id="monthly_overview" lang="en-GB">
+		{% include 'month_selector.html' %}
+		<div class="header">
+			<div id="logo" class="logo">
+				<img class="_idGenObjectAttribute-1" src="{{ url_for('static', filename='logo.png') }}" alt="" />
+			</div>
+			<div id="title" class="Basic-Text-Frame">
+			<p class="Basic-Paragraph"><span class="HEADER">Monthly</span></p>
+			<p class="Basic-Paragraph"><span class="HEADER">overview</span></p>
+            </div>
+            <div id="date" class="Basic-Text-Frame">
+			<p class="Basic-Paragraph ParaOverride-2"><span class="HEADER">{{ events[0].month }}</span></p>
+			<p class="Basic-Paragraph ParaOverride-2"><span class="HEADER">2021</span></p>
+
+            </div>
+		</div>
+		<div id="_idContainer001" class="Basic-Text-Frame _idGenObjectStyleOverride-2">
+			<table id="table001" class="Basic-Table">
+				<colgroup>
+					<col class="_idGenTableRowColumn-1" />
+					<col class="_idGenTableRowColumn-2" />
+					<col class="_idGenTableRowColumn-3" />
+					<col class="_idGenTableRowColumn-4" />
+				</colgroup>
+				<tbody>
+					<tr class="Basic-Table table-header">
+						<td class="Basic-Table CellOverride-1">
+							<p class="Basic-Paragraph"><span class="TOPBAR">WHEN??  WHen??</span></p>
+						</td>
+						<td class="Basic-Table CellOverride-1">
+							<p class="Basic-Paragraph"><span class="TOPBAR">TIME??</span></p>
+						</td>
+						<td class="Basic-Table CellOverride-1">
+							<p class="Basic-Paragraph"><span class="TOPBAR">WHAT??  WHAT??  WHAT??  WHAT??  WHAT??  WHAT??  WHAT??  WHAT??  WHAT??</span><span class="TOPBAR"> </span></p>
+						</td>
+						<td class="Basic-Table CellOverride-1">
+							<p class="Basic-Paragraph"><span class="TOPBAR">€€€€€€??</span></p>
+						</td>
+					</tr>
+					{% for event in events %}
+					<tr class="Basic-Table">
+						{% if event.same_day %}
+						<td class="Basic-Table CellOverride-4">
+						</td>
+						{% else %}
+						<td class="Basic-Table CellOverride-2">
+							<p class="Basic-Paragraph"><span class="DATE">{{ event.date }}</span><span class="CharOverride-4"> </span><span class="DAY">{{ event.weekday }}</span></p>
+						</td>
+						{% endif %}
+						<td class="Basic-Table CellOverride-2">
+							<p class="Basic-Paragraph"><span class="TIME">{{ event.time }}</span></p>
+						</td>
+						<td class="Basic-Table CellOverride-2">
+							<p class="Basic-Paragraph"><span class="ACT">{{ event.title }}</span><span class="CharOverride-2"> </span><span class="GENRE">— {{ event.subtitle }}</span></p>
+						</td>
+						<td class="Basic-Table CellOverride-2">
+							<p class="Basic-Paragraph"><span class="PRICE">{{ event.price }}</span></p>
+						</td>
+					</tr>
+					{% endfor %}
+					<tr class="Basic-Table">
+						<td class="Basic-Table CellOverride-7" colspan="4">
+							<p class="Basic-Paragraph ParaOverride-1"><span class="CharOverride-6">This month on display:</span><span class="CharOverride-7"> </span><span class="CharOverride-8">Lasse van den Dikkenberg</span></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		<div class="footer">
+		<div id="address-layout" class="Basic-Text-Frame">
+			<p class="Basic-Paragraph"><span class="FOOTER CharOverride-9">ACU</span></p>
+			<p class="Basic-Paragraph"><span class="FOOTER">VOORSTRAAT 71 </span></p>
+			<p class="Basic-Paragraph"><span class="FOOTER">3512 AK Utrecht</span></p>
+		</div>
+		<div id="contacts-layout" class="Basic-Text-Frame">
+			<p class="Basic-Paragraph"><span class="FOOTER CharOverride-9">Cultural and political centre</span></p>
+			<p class="Basic-Paragraph"><span class="FOOTER">Web: www.ACU.nl</span></p>
+			<p class="Basic-Paragraph"><span class="FOOTER">Phone: (030) 231 45 90</span></p>
+		</div>
+        </div></div>
+	</body>
+</html>
