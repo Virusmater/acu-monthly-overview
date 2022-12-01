@@ -9,28 +9,34 @@ headers = {
     'Access-Control-Allow-Headers': 'Content-Type',
     'Access-Control-Max-Age': '3600',
     'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0'
-    }
+}
 
-url = "https://acu.nl/agenda/"
-req = requests.get(url, headers)
-soup = BeautifulSoup(req.content, 'html.parser')
-soup = soup.find("div", id="AgendaWrap")
-agenda_elements = soup.find_all("li", class_="AgendaEntry")
+url_agenda = "https://acu.nl/agenda/"
+req_agenda = requests.get(url_agenda, headers)
+soup_agenda = BeautifulSoup(req_agenda.content, 'html.parser')
+soup_agenda = soup_agenda.find("div", id="AgendaWrap")
+agenda_elements = soup_agenda.find_all("li", class_="AgendaEntry")
 
+url_agenda = "https://acu.nl/agenda/"
+req_agenda = requests.get(url_agenda, headers)
+soup_agenda = BeautifulSoup(req_agenda.content, 'html.parser')
+soup_agenda = soup_agenda.find("div", id="AgendaWrap")
+agenda_elements = soup_agenda.find_all("li", class_="AgendaEntry")
 
 def get_events(target_month):
-    events=[]
+    events = []
     for event_li in agenda_elements:
         month = event_li.find("span", class_="AgendaMonth").get_text()
         if target_month != month:
             continue
         event = Event()
+        event.year = event_li.find("span", class_="AgendaYear").get_text()
         event.month = month
         event.title = event_li.find("div", class_="AgendaTitle").find("h2").get_text()
         event.subtitle = event_li.find("div", class_="AgendaTitle").find("h3").get_text()
         date = event_li.find("span", class_="AgendaDay").get_text()
         if len(date) == 3:
-            date = "0"+date
+            date = "0" + date
         date = date[0:2]
         event.date = date
         if events and date == events[-1].date:
@@ -45,3 +51,11 @@ def get_events(target_month):
             event.set_price(agenda_details[1].get_text())
         events.append(event)
     return events
+
+
+def get_art():
+    url_art = "https://acu.nl/"
+    req_art = requests.get(url_art, headers)
+    soup_art = BeautifulSoup(req_art.content, 'html.parser')
+    soup_art = soup_art.find("h4", class_="HomeArtArtist")
+    return soup_art.getText()

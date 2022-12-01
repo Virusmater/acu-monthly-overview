@@ -9,6 +9,7 @@ class Event:
         self.weekday = ""
         self.same_day = False
         self.month = ""
+        self.year = ""
 
     def set_price(self, price):
         if price == "Donation based":

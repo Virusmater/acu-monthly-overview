@@ -7,6 +7,7 @@
 	</head>
 	<body id="monthly_overview" lang="en-GB">
 		{% include 'month_selector.html' %}
+		{% if events %}
 		<div class="header">
 			<div id="logo" class="logo">
 				<img class="_idGenObjectAttribute-1" src="{{ url_for('static', filename='logo.png') }}" alt="" />
@@ -17,7 +18,7 @@
             </div>
             <div id="date" class="Basic-Text-Frame">
 			<p class="Basic-Paragraph ParaOverride-2"><span class="HEADER">{{ events[0].month }}</span></p>
-			<p class="Basic-Paragraph ParaOverride-2"><span class="HEADER">2021</span></p>
+			<p class="Basic-Paragraph ParaOverride-2"><span class="HEADER">{{ events[0].year }}</span></p>
 
             </div>
 		</div>
@@ -67,7 +68,7 @@
 					{% endfor %}
 					<tr class="Basic-Table">
 						<td class="Basic-Table CellOverride-7" colspan="4">
-							<p class="Basic-Paragraph ParaOverride-1"><span class="CharOverride-6">This month on display:</span><span class="CharOverride-7"> </span><span class="CharOverride-8">Lasse van den Dikkenberg</span></p>
+							<p class="Basic-Paragraph ParaOverride-1"><span class="CharOverride-6">This month on display:</span><span class="CharOverride-7"> </span><span class="CharOverride-8">{{ artist }}</span></p>
 						</td>
 					</tr>
 				</tbody>
@@ -84,5 +85,8 @@
 			<p class="Basic-Paragraph"><span class="FOOTER">Phone: (030) 231 45 90</span></p>
 		</div>
         </div></div>
+	{% else %}
+		No events ;-(
+	{% endif %}
 	</body>
 </html>

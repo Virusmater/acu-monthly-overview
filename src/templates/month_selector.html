@@ -1,17 +1,8 @@
 <form class="month-selector">
     <select id="month" name="month">
-        <option selected>January</option>
-        <option>February</option>
-        <option>March</option>
-        <option>April</option>
-        <option>May</option>
-        <option>June</option>
-        <option>July</option>
-        <option>August</option>
-        <option>September</option>
-        <option>October</option>
-        <option>November</option>
-        <option>December</option>
+        {% for month in months %}
+        <option {% if month.name == selected_month %} selected {% endif %}>{{ month.name }}</option>
+        {% endfor %}
     </select>
     <input type="submit" value="Submit">
 </form>
