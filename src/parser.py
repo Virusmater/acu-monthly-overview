@@ -11,19 +11,12 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0'
 }
 
-url_agenda = "https://acu.nl/agenda/"
-req_agenda = requests.get(url_agenda, headers)
-soup_agenda = BeautifulSoup(req_agenda.content, 'html.parser')
-soup_agenda = soup_agenda.find("div", id="AgendaWrap")
-agenda_elements = soup_agenda.find_all("li", class_="AgendaEntry")
-
-url_agenda = "https://acu.nl/agenda/"
-req_agenda = requests.get(url_agenda, headers)
-soup_agenda = BeautifulSoup(req_agenda.content, 'html.parser')
-soup_agenda = soup_agenda.find("div", id="AgendaWrap")
-agenda_elements = soup_agenda.find_all("li", class_="AgendaEntry")
-
 def get_events(target_month):
+    url_agenda = "https://test.acu.nl/agenda/"
+    req_agenda = requests.get(url_agenda, headers)
+    soup_agenda = BeautifulSoup(req_agenda.content, 'html.parser')
+    soup_agenda = soup_agenda.find("div", id="AgendaWrap")
+    agenda_elements = soup_agenda.find_all("li", class_="AgendaEntry")
     events = []
     for event_li in agenda_elements:
         month = event_li.find("span", class_="AgendaMonth").get_text()
