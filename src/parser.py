@@ -12,7 +12,7 @@ headers = {
 }
 
 def get_events(target_month):
-    url_agenda = "https://test.acu.nl/agenda/"
+    url_agenda = "https://acu.nl/agenda/"
     req_agenda = requests.get(url_agenda, headers)
     soup_agenda = BeautifulSoup(req_agenda.content, 'html.parser')
     soup_agenda = soup_agenda.find("div", id="AgendaWrap")
