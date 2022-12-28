@@ -329,3 +329,14 @@ div.footer {
         display: none !important;
     }
 }
+
+span.sneak {
+    position: absolute;
+    margin-top: -20px;
+    margin-left: 30px;
+    background:white;
+    font-family: "ETC Trispace SemiBold Narrow", serif;
+    font-size: 12pt;
+    font-style: normal;
+    font-weight: 600;
+}

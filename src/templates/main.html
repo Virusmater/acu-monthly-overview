@@ -52,7 +52,33 @@
 						</td>
 						{% else %}
 						<td class="Basic-Table CellOverride-2">
-							<p class="Basic-Paragraph"><span class="DATE">{{ event.date }}</span><span class="CharOverride-4"> </span><span class="DAY">{{ event.weekday }}</span></p>
+							<p class="Basic-Paragraph">
+<span class="DATE">{{ event.date }}</span><span class="CharOverride-4"> </span><span class="DAY">{{ event.weekday }}</span></p>
+						</td>
+						{% endif %}
+						<td class="Basic-Table CellOverride-2">
+							<p class="Basic-Paragraph"><span class="TIME">{{ event.time }}</span></p>
+						</td>
+						<td class="Basic-Table CellOverride-2">
+							<p class="Basic-Paragraph"><span class="ACT">{{ event.title }}</span><span class="CharOverride-2"> </span><span class="GENRE">— {{ event.subtitle }}</span></p>
+						</td>
+						<td class="Basic-Table CellOverride-2">
+							<p class="Basic-Paragraph"><span class="PRICE">{{ event.price }}</span></p>
+						</td>
+					</tr>
+					{% endfor %}
+					{% for event in sneak %}
+					<tr class="Basic-Table">
+						{% if event.same_day %}
+						<td class="Basic-Table CellOverride-4">
+						</td>
+						{% else %}
+						<td class="Basic-Table CellOverride-2">
+							{% if loop.first %}
+												<span class="sneak">⇩ SNEAK PEEK ⇩ — ⇩ SNEAK PEEK ⇩ — ⇩ SNEAK PEEK ⇩ — ⇩ SNEAK PEEK ⇩ — ⇩ SNEAK PEEK ⇩ — ⇩ SNEAK PEEK ⇩</span>
+							{% endif %}
+							<p class="Basic-Paragraph">
+							<span class="DATE">{{ event.date }}</span><span class="CharOverride-4"> </span><span class="DAY">{{ event.weekday }}</span></p>
 						</td>
 						{% endif %}
 						<td class="Basic-Table CellOverride-2">

@@ -19,6 +19,9 @@ def get_events(target_month):
     agenda_elements = soup_agenda.find_all("li", class_="AgendaEntry")
     events = []
     for event_li in agenda_elements:
+        is_cancelled = event_li.find("div", class_="CancelledEvent")
+        if is_cancelled:
+            continue
         month = event_li.find("span", class_="AgendaMonth").get_text()
         if target_month != month:
             continue
