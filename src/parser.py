@@ -1,6 +1,6 @@
 import requests as requests
 from bs4 import BeautifulSoup
-
+import time
 from src.event import Event
 
 headers = {
@@ -35,8 +35,8 @@ def get_events(target_month):
             date = "0" + date
         date = date[0:2]
         event.date = date
-        if events and date == events[-1].date:
-            event.same_day = True
+        # if events and date == events[-1].date:
+        #     event.same_day = True
         event.weekday = event_li.find("span", class_="AgendaWeekday").get_text()
         agenda_details = event_li.find_all("span", class_="AgendaDetail")
         if len(agenda_details) == 3:
@@ -45,6 +45,7 @@ def get_events(target_month):
         else:
             event.time = event_li.find_all("span", class_="AgendaDetail")[0].get_text()
             event.set_price(agenda_details[1].get_text())
+        event.weekday_num = time.strptime(event.weekday, "%A").tm_wday
         events.append(event)
     return events
 

@@ -16,17 +16,49 @@ def main():
         currentDateTime = datetime.now()
         date = currentDateTime.date()
         date = date + relativedelta.relativedelta(months=1)
-        print(date)
         month = date.strftime("%B")
     events = parser.get_events(month)
-    sneak = []
-    if 0 < len(events) < 33:
-        extra = 33 - len(events)
-        month = next_month(events[0].year, month)
-        sneak = parser.get_events(month)[:extra]
+
     artist = parser.get_art()
-    return render_template('main.html', events=events, sneak=sneak, artist=artist, months=month_list(),
+    recurrent = process_recurrent(events)
+    sneak = []
+    total = len(events) + len(recurrent)
+    if 0 < total < 25:
+        extra = 25 - total
+        month = next_month(events[0].year, month)
+        sneak = parser.get_events(month)
+        process_recurrent(sneak, limit=1)
+        same_day(sneak)
+        sneak = sneak[:extra]
+    same_day(events)
+    return render_template('main.html', events=events, sneak=sneak, recurrent=recurrent, artist=artist,
+                           months=month_list(),
                            selected_month=month)
+
+
+def same_day(events):
+    date = ""
+    for event in events:
+        if date == event.date:
+            event.same_day = True
+        date = event.date
+
+
+def process_recurrent(events, limit=2):
+    recurrent = []
+    original_list = list(events)
+    for event in list(original_list):
+        if sum(1 for i in original_list if i.title == event.title) > limit:
+            event.recurrent = True
+            events.remove(event)
+            if sum(1 for i in recurrent if i.title == event.title) == 0:
+                if recurrent and event.date == recurrent[-1].date:
+                    event.same_day = True
+                recurrent.append(event)
+    recurrent = sorted(recurrent,
+                       key=lambda x: x.weekday_num
+                       )
+    return recurrent
 
 
 def next_month(year, month):

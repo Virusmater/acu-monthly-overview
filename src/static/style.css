@@ -331,12 +331,25 @@ div.footer {
 }
 
 span.sneak {
-    position: absolute;
-    margin-top: -20px;
-    margin-left: 30px;
-    background:white;
     font-family: "ETC Trispace SemiBold Narrow", serif;
     font-size: 12pt;
     font-style: normal;
     font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    display: flex;
+    justify-content: center
+}
+
+tr.Title {
+    background: black;
+}
+
+div.Volunteers {
+        display: flex;
+    justify-content: center;
+}
+
+div.Volunteers img {
+    width: 60%;
 }
