@@ -368,3 +368,7 @@ div.Volunteers {
 div.Volunteers img {
     width: 60%;
 }
+
+p.Title {
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 90%, rgba(0,0,0,0));
+}
