@@ -44,7 +44,10 @@ def get_events(target_month):
             event.set_price(agenda_details[2].get_text())
         else:
             event.time = event_li.find_all("span", class_="AgendaDetail")[0].get_text()
-            event.set_price(agenda_details[1].get_text())
+            try:
+                event.set_price(agenda_details[1].get_text())
+            except IndexError:
+                event.set_price("Priceless")
         event.weekday_num = time.strptime(event.weekday, "%A").tm_wday
         events.append(event)
     return events

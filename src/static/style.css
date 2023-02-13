@@ -305,12 +305,17 @@ div.logo {
 
 div.header {
 	text-align:center;
+	    display: -webkit-box;
     display: flex;
     height: 60pt;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
 }
 
 
 div.footer {
+    display: -webkit-box;
     display: flex;
     position: fixed;
     bottom:0%;
@@ -343,8 +348,10 @@ span.sneak {
     font-weight: 600;
     text-transform: uppercase;
     color: white;
+    display: -webkit-box;
     display: flex;
-    justify-content: center
+    -webkit-box-pack: center;
+    justify-content: center;
 }
 
 tr.Title {
@@ -352,7 +359,9 @@ tr.Title {
 }
 
 div.Volunteers {
-        display: flex;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
     justify-content: center;
 }
 
