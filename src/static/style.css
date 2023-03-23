@@ -79,7 +79,6 @@ td.Basic-Table {
 }
 p.Basic-Paragraph {
 	text-align:left;
-	    display: flex;
 }
 span.ACT {
 	font-family:"ETC Trispace Black", serif;
