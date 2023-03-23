@@ -26,6 +26,8 @@ def get_events(target_month):
         if target_month != month:
             continue
         event = Event()
+        if "weekly" in event_li.attrs['class']:
+            event.is_weekly = True
         event.year = event_li.find("span", class_="AgendaYear").get_text()
         event.month = month
         event.title = event_li.find("div", class_="AgendaTitle").find("h2").get_text()

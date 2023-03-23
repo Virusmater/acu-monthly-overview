@@ -12,6 +12,7 @@ class Event:
         self.year = ""
         self.recurrent = False
         self.weekday_num = -1
+        self.is_weekly = False
 
     def set_price(self, price):
         if price == "Donation based":

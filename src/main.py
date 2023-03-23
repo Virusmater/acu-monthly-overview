@@ -27,7 +27,8 @@ def main():
         extra = 25 - total
         month = next_month(events[0].year, month)
         sneak = parser.get_events(month)
-        process_recurrent(sneak, limit=1)
+        # remove weekly events for sneak peek
+        sneak = [event for event in sneak if event.is_weekly is False]
         same_day(sneak)
         sneak = sneak[:extra]
     same_day(events)

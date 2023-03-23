@@ -79,6 +79,7 @@ td.Basic-Table {
 }
 p.Basic-Paragraph {
 	text-align:left;
+	    display: flex;
 }
 span.ACT {
 	font-family:"ETC Trispace Black", serif;
@@ -371,4 +372,10 @@ div.Volunteers img {
 
 p.Title {
   -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 95%, rgba(0,0,0,0));
+}
+
+span.TOPBAR {
+text-align: left;
+display: flex;
+white-space: nowrap;
 }
