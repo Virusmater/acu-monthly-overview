@@ -4,10 +4,12 @@
 		<meta charset="utf-8" />
 		<title>monthly_overview</title>
     	<link href="{{ url_for('static', filename='style.css') }}" rel='stylesheet'/>
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
 	</head>
 	<body id="monthly_overview" lang="en-GB">
 		{% include 'month_selector.html' %}
 		{% if events %}
+		<div id="printable">
 		<div class="header">
 			<div id="logo" class="logo">
 				<img class="_idGenObjectAttribute-1" src="{{ url_for('static', filename='acu_logo_v2.svg') }}" alt="" />
@@ -33,16 +35,16 @@
 				<tbody>
 					<tr class="Basic-Table table-header">
 						<td class="Basic-Table CellOverride-1">
-							<p class="Basic-Paragraph"><span class="TOPBAR">WHEN??  WHen??</span></p>
+							<p class="TOPBAR"><span class="TOPBAR">WHEN??  WHen??</span></p>
 						</td>
 						<td class="Basic-Table CellOverride-1">
-							<p class="Basic-Paragraph"><span class="TOPBAR">TIME??</span></p>
+							<p class="TOPBAR"><span class="TOPBAR">TIME??</span></p>
 						</td>
 						<td class="Basic-Table CellOverride-1">
-							<p class="Basic-Paragraph"><span class="TOPBAR">WHAT??  WHAT??  WHAT??  WHAT??  WHAT??  WHAT??  WHAT??  WHAT??  WHAT??</span><span class="TOPBAR"> </span></p>
+							<p class="TOPBAR"><span class="TOPBAR">WHAT??  WHAT??  WHAT??  WHAT??  WHAT??  WHAT??  WHAT??  WHAT??  WHAT??</span>
 						</td>
 						<td class="Basic-Table CellOverride-1">
-							<p class="Basic-Paragraph"><span class="TOPBAR">€€€€€€??</span></p>
+							<p class="TOPBAR"><span class="TOPBAR">€€€€€€??</span></p>
 						</td>
 					</tr>
 					{% for event in events if not event.recurrent%}
@@ -146,6 +148,7 @@
 			<p class="Basic-Paragraph"><span class="FOOTER">Phone: (030) 231 45 90</span></p>
 		</div>
         </div></div>
+</div>
 	{% else %}
 		No events ;-(
 	{% endif %}

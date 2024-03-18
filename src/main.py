@@ -49,10 +49,10 @@ def process_recurrent(events, limit=2):
     recurrent = []
     original_list = list(events)
     for event in list(original_list):
-        if sum(1 for i in original_list if i.title == event.title) > limit:
+        if sum(1 for i in original_list if (i.title == event.title) and (i.weekday == event.weekday)) > limit:
             event.recurrent = True
             events.remove(event)
-            if sum(1 for i in recurrent if i.title == event.title) == 0:
+            if sum(1 for i in recurrent if (i.title == event.title) and (i.weekday == event.weekday)) == 0:
                 if recurrent and event.date == recurrent[-1].date:
                     event.same_day = True
                 recurrent.append(event)

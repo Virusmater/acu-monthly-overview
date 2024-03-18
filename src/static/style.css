@@ -80,6 +80,11 @@ td.Basic-Table {
 p.Basic-Paragraph {
 	text-align:left;
 }
+
+p.TOPBAR {
+	text-align:center;
+}
+
 span.ACT {
 	font-family:"ETC Trispace Black", serif;
 	font-size:12pt;
@@ -374,7 +379,5 @@ p.Title {
 }
 
 span.TOPBAR {
-text-align: left;
-display: flex;
 white-space: nowrap;
 }
