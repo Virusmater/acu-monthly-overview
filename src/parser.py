@@ -30,8 +30,8 @@ def get_events(target_month):
             event.is_weekly = True
         event.year = event_li.find("span", class_="AgendaYear").get_text()
         event.month = month
-        event.title = event_li.find("div", class_="AgendaTitle").find("h2").get_text()
-        event.subtitle = event_li.find("div", class_="AgendaTitle").find("h3").get_text()
+        event.title = event_li.find("p", class_="pseudo-h2").get_text()
+        event.subtitle = event_li.find("p", class_="pseudo-h3").get_text()
         date = event_li.find("span", class_="AgendaDay").get_text()
         if len(date) == 3:
             date = "0" + date
