@@ -86,7 +86,7 @@ p.TOPBAR {
 }
 
 span.ACT {
-	font-family:"ETC Trispace Black", serif;
+	font-family:"ETC Trispace Black", "Noto Color Emoji", serif;
 	font-size:12pt;
 	font-style:normal;
 	font-weight: normal;
