@@ -340,7 +340,7 @@ div.footer {
 
 @media print
 {
-    .month-selector, .month-selector *
+    #control, .month-selector, .month-selector *
     {
         display: none !important;
     }
