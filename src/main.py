@@ -25,8 +25,8 @@ def main():
     total = len(events) + len(recurrent)
     if 0 < total < 25:
         extra = 25 - total
-        month = next_month(events[0].year, month)
-        sneak = parser.get_events(month)
+        sneak_month = next_month(events[0].year, month)
+        sneak = parser.get_events(sneak_month)
         # remove weekly events for sneak peek
         sneak = [event for event in sneak if event.is_weekly is False]
         same_day(sneak)
